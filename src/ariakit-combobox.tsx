@@ -320,6 +320,7 @@ export const ComboboxOptionText = React.forwardRef(
 			});
 			observer.observe(rootElement, {
 				childList: true,
+				subtree: true,
 			});
 			return () => {
 				observer.disconnect();
