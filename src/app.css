@@ -1,0 +1,66 @@
+html,
+body,
+#root,
+.app {
+	block-size: 100%;
+	inline-size: 100%;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	padding: 1rem 0;
+	border-bottom: 1px solid var(--color-border);
+}
+
+.container {
+	--pad: 1rem;
+	width: 100%;
+	max-width: calc(100% - var(--pad) * 2);
+	margin: 0 auto;
+}
+
+[data-reach-combobox-popover] {
+	border: solid 1px var(--color-border);
+	background: var(--color-bg);
+	font-size: 85%;
+}
+
+[data-reach-combobox-list] {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	user-select: none;
+}
+
+[data-reach-combobox-option] {
+	cursor: pointer;
+	margin: 0;
+	padding: 0.25rem 0.5rem;
+}
+
+[data-reach-combobox-option][aria-selected="true"] {
+	background: var(--color-bg-selected);
+	color: var(--color-fg-selected);
+}
+
+[data-reach-combobox-option]:hover {
+	background: var(--color-bg-hovered);
+	color: var(--color-fg-hovered);
+}
+
+[data-reach-combobox-option][aria-selected="true"]:hover {
+	background: var(--color-bg-selected-hovered);
+	color: var(--color-fg-selected-hovered);
+}
+
+[data-autocomplete-value] {
+	font-weight: bold;
+}
